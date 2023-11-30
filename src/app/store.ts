@@ -12,6 +12,7 @@ import {
 } from "redux-persist";
 
 import counterReducer from "../pages/counter/counterSlice";
+import postsReducer from "../pages/posts/postSlice"
 
 // Persist configuration
 const perisistConfig: PersistConfig<RootState> = {
@@ -30,6 +31,7 @@ const perisistConfig: PersistConfig<RootState> = {
 const rootReducer = combineReducers({
   // Key should match name of slice
   counter: counterReducer,
+  posts: postsReducer,
 });
 
 // Persist the reducers
